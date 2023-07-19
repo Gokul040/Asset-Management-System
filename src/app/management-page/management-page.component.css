@@ -1,0 +1,77 @@
+
+
+mat-toolbar {
+    background: white;
+    color: #595a5b;
+}
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #eb0028;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+.content {
+    height: calc(100vh - 130px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    padding: 16px;
+    overflow:auto;
+}
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+.menu-button::after {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    margin: 20px 0;
+    background-color: white !important;
+}
+
+.menu-button mat-icon {
+    margin-right: 8px;
+    color: white;
+}
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+.mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color:#9e001b;
+}
+.navlist{
+    color: white;
+    font-size: small;
+}
+#exit{
+    margin-left: auto;
+    margin-right: 20px;
+}

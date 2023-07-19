@@ -1,0 +1,288 @@
+{
+  "productList": [
+    {
+      "name": "kjlj gh",
+      "placeno": "90-",
+      "branchid": "GSC2",
+      "assetid": "769",
+      "lockercode": "769",
+      "location": "C",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 2
+    },
+    {
+      "name": "hjlhjl j",
+      "placeno": "867",
+      "branchid": "GSC1",
+      "assetid": "768",
+      "lockercode": "685r",
+      "location": "C",
+      "assettype": "Keyboard",
+      "assetstatus": "Not Availabe",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 3
+    },
+    {
+      "name": "iul j",
+      "placeno": "67",
+      "branchid": "GSC2",
+      "assetid": "7",
+      "lockercode": "7",
+      "location": "B",
+      "assettype": "Laptop",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 4
+    },
+    {
+      "name": "tutu h",
+      "placeno": "6",
+      "branchid": "GSC2",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "createdDate": "2020",
+      "id": 5
+    },
+    {
+      "name": "hgh h",
+      "placeno": "6",
+      "branchid": "GSC2",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 8
+    },
+    {
+      "name": "kyt k",
+      "placeno": "6",
+      "branchid": "GSC2",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 9
+    },
+    {
+      "name": "kyt k",
+      "placeno": "6",
+      "branchid": "GSC2",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 10
+    },
+    {
+      "name": "jkyt j",
+      "placeno": "6",
+      "branchid": "GSC2",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 13
+    },
+    {
+      "name": "h g",
+      "placeno": "h",
+      "branchid": "GSC2",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 14
+    },
+    {
+      "name": "h h",
+      "placeno": "6",
+      "branchid": "GSC1",
+      "assetid": "6",
+      "lockercode": "6",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "updatedDate": "2020",
+      "CreatedDate": "2020",
+      "id": 15
+    },
+    {
+      "name": "test f",
+      "placeno": "45454",
+      "branchid": "GSC1",
+      "assetid": "646",
+      "lockercode": "646",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "id": 16
+    },
+    {
+      "name": "gt g",
+      "placeno": "75",
+      "branchid": "GSC1",
+      "assetid": "67",
+      "lockercode": "67",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "id": 17
+    },
+    {
+      "name": "gr 6",
+      "placeno": "5765",
+      "branchid": "GSC2",
+      "assetid": "575",
+      "lockercode": "57",
+      "location": "A",
+      "assettype": "Laptop",
+      "assetstatus": "Available",
+      "id": 18
+    },
+    {
+      "name": "trj h",
+      "placeno": "ghg",
+      "branchid": "GSC1",
+      "assetid": "thr",
+      "lockercode": "gfj",
+      "location": "B",
+      "assettype": "Laptop",
+      "assetstatus": "Not Availabe",
+      "id": 19
+    },
+    {
+      "name": "dsf f",
+      "placeno": "463",
+      "branchid": "GSC2",
+      "assetid": "547",
+      "lockercode": "fdh",
+      "location": "C",
+      "assettype": "Keyboard",
+      "assetstatus": "Not Availabe",
+      "id": 20
+    },
+    {
+      "name": "fgdf g",
+      "placeno": "fh",
+      "branchid": "GSC2",
+      "assetid": "ghg",
+      "lockercode": "gh",
+      "location": "B",
+      "assettype": "Keyboard",
+      "assetstatus": "Available",
+      "id": 21
+    }
+  ],
+  "profile": [
+    {
+      "firstname": "h",
+      "lastname": "h",
+      "contactno": "32532532532",
+      "emailid": "32r3",
+      "password": "fef",
+      "id": 3
+    },
+    {
+      "firstname": "0870",
+      "lastname": "iup",
+      "contactno": "iupi",
+      "emailid": "io",
+      "password": "ioi",
+      "role": "Admin",
+      "status": "Active",
+      "id": 8
+    },
+    {
+      "firstname": "oiuo",
+      "lastname": "ioiu",
+      "contactno": "io",
+      "emailid": "kljk",
+      "password": "jl",
+      "role": "Admin",
+      "status": "Active",
+      "id": 9
+    },
+    {
+      "firstname": "5y",
+      "lastname": "yy",
+      "contactno": "yrt",
+      "emailid": "t",
+      "password": "t",
+      "role": "Creator",
+      "status": "Active",
+      "id": 10
+    },
+    {
+      "firstname": "5y",
+      "lastname": "yy",
+      "contactno": "yrt",
+      "emailid": "t",
+      "password": "t",
+      "role": "Creator",
+      "status": "Active",
+      "id": 11
+    },
+    {
+      "firstname": "yit",
+      "lastname": "rtut",
+      "contactno": "turt",
+      "emailid": "trurt",
+      "password": "trurt",
+      "role": "Creator",
+      "status": "Non-Active",
+      "id": 12
+    },
+    {
+      "firstname": "hjkjh",
+      "lastname": "jhkl",
+      "contactno": "jhk",
+      "emailid": "jhkh",
+      "password": "hjkjh",
+      "role": "Creator",
+      "status": "Active",
+      "id": 13
+    }
+  ],
+  "assetType": [
+    {
+      "branchid": "GSC2",
+      "assettype": "Keyboard",
+      "id": 2
+    },
+    {
+      "branchid": "GSC3",
+      "assettype": "tyj",
+      "id": 3
+    },
+    {
+      "branchid": "GSC2",
+      "assettype": "jtrj",
+      "id": 5
+    }
+  ]
+}

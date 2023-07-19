@@ -1,0 +1,53 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <img src="assets/EXPD.svg" style="height: 30px; width: auto; margin-right: 16px;">
+  <p>Asset Management Portal</p>
+
+  <div id="exit">
+    <mat-icon [matMenuTriggerFor]="menu">exit_to_app</mat-icon>
+    <mat-menu #menu="matMenu">
+      <div mat-menu-item>
+        <mat-icon>person</mat-icon>{{userName}} {{lastUserName}}
+      </div>
+      <button mat-menu-item routerLink="changePassword">Change Password</button>
+      <button mat-menu-item (click)="logout()">Log Out</button>
+
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="adminDashboard">
+      <mat-icon>dashboard</mat-icon>
+      <span class="navlist">Admin Dashboard</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="assetManagement">
+      <mat-icon>settings</mat-icon>
+      <span class="navlist">Asset Management</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="userManagement" *ngIf="isShowNavigate">
+      <mat-icon>manage_accounts</mat-icon>
+      <span class="navlist">User Management</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="AMEditpage" *ngIf="isShowNavigate">
+      <mat-icon>settings_applications</mat-icon>
+      <span class="navlist">Master Form</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="help">
+      <mat-icon>help</mat-icon>
+      <span class="navlist">Help</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

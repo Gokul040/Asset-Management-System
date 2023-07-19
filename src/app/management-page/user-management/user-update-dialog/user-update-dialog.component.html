@@ -1,0 +1,62 @@
+<h1 mat-dialog-title align="middle"> User Details </h1>
+<div mat-dialog-content>
+  <form [formGroup]="updateForm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enter First Name</mat-label>
+      <input formControlName="firstname" matInput placeholder="First Name" [(ngModel)]="editDatas.firstName" matInput
+        formControlName="firstName">
+      <mat-icon matSuffix> person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Last Name</mat-label>
+      <input formControlName="lastname" matInput placeholder="Last Name" matInput [(ngModel)]="editDatas.lastName"
+        formControlName="lastName">
+      <mat-icon matSuffix> person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Contact No</mat-label>
+      <input formControlName="contactno" placeholder="Contact No" [(ngModel)]="editDatas.contact" matInput
+        formControlName="contact">
+      <mat-icon matSuffix> phone</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label> Role</mat-label>
+      <mat-select placeholder="role" matInput [(ngModel)]="editDatas.role" formControlName="role">
+        <mat-option value="ADMIN">ADMIN</mat-option>
+        <mat-option value="USER">CREATER</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Email id</mat-label>
+      <input placeholder="Email Id" matInput [(ngModel)]="editDatas.email" formControlName="email">
+      <mat-icon matSuffix> email</mat-icon>
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>Enter password</mat-label>
+      <input formControlName="password" matinput placeholder="password" type="password"  matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field> -->
+
+    <section class="example-section">
+      <label class="example-margin">Account Status:</label>
+      <mat-radio-group [(ngModel)]="editDatas.enabled" formControlName="enabled">
+        <mat-radio-button class="example-margin" value="true">Active</mat-radio-button>
+        <mat-radio-button class="example-margin" value="false">Non-Active</mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button style=" margin-left: 8px;" type="submit" mat-raised-button color="primary"
+    (click)="updateUser()">Update</button>
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>
