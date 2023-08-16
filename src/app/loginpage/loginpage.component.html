@@ -1,0 +1,134 @@
+<body>
+  <img src="assets/bg3.jpg" id="bg">
+  <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <img mat-card-image src="assets/EXPD_BIG.svg" style="height: 30px; width: auto; ">
+  </mat-toolbar>
+
+  <!-- Login Form -->
+  <mat-card *ngIf="isSignin">
+    <mat-card-content>
+      <form #loginForm="ngForm" [formGroup]="signInForm" (ngSubmit)="updateLogin()">
+        <h1 style="color: #595a5b;"><img mat-card-image src="assets/EXPD.svg" style="height: 15px; width: auto;"> Asset
+          Management System</h1>
+        <h2>Log In</h2>
+        <mat-error *ngIf="!loginValid">
+          The username and password were not recognized
+        </mat-error>
+        <mat-form-field>
+          <input matInput placeholder="Email" name="username" required formControlName="userName">
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password" name="password" required formControlName="password">
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+ 
+        <button mat-raised-button color="accent" type="submit" class="button" [disabled]="!signInForm.valid">
+          Login   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="spinner"></span></button><br><br>
+        <p (click)="isforgot()" style="color: rgb(54, 54, 183); cursor: pointer;">Forgot Password</p>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+      
+
+
+
+  <!-- Forgot Password Form -->
+  <mat-card class="progress-div" *ngIf="isforgotPassword">
+    <mat-card-content>
+      <form [formGroup]="forgotForm">
+        <h1 style="color: #595a5b;"><img mat-card-image src="assets/EXPD.svg" style="height: 15px; width: auto;"> Asset
+          Management System</h1>
+        <h2>Forget Password</h2>
+        <h3 style="text-align: left;">
+          <li>Enter your mail</li>
+          <li>Click, Reset Button</li>
+          <li>The otp will be generating on your Email ID</li>
+          <li>Enter your otp and New Password</li>
+        </h3>
+        <mat-error *ngIf="!loginValid">
+          The username and password were not recognized
+        </mat-error>
+        <mat-form-field>
+          <input matInput placeholder="Email" name="username" required formControlName="email">
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="accent" class="button" type="submit" (click)="forgotPassword()"
+          [disabled]="!forgotForm.valid">Reset
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="spinner"></span>
+         </button><br><br>
+        <p (click)="isSigninpage()" style="color: rgb(54, 54, 183); cursor: pointer; ">Back</p>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- <mat-spinner mode="indeterminate" *ngIf="spinner"></mat-spinner> -->
+  
+  <!-- Confirm Password Form -->
+  <mat-card *ngIf="isConfirmPassword">
+    <mat-card-content>
+     
+
+      <form id="form" [formGroup]="passwordform">
+        <h1 style="color: #595a5b;"><img mat-card-image src="assets/EXPD.svg" style="height: 15px; width: auto;"> Asset
+          Management System</h1>
+        <h2>Enter New Password</h2>
+        
+        <mat-error *ngIf="!loginValid">
+          Enter Password
+        </mat-error>
+
+        <!-- Email -->
+        <mat-form-field>
+          <input matInput type="email" placeholder="Enter Email" name="email" formControlName="email" required>
+        </mat-form-field>
+
+
+        <!-- OTP -->
+        <mat-form-field>
+          <input matInput type="number" placeholder="Enter 6 digit OTP" name="otp" formControlName="otp" required>
+        </mat-form-field>
+
+        <!-- Password -->
+        <mat-form-field>
+          <input matInput type="password" placeholder="Enter New Password" name="password" formControlName="password"
+            required>
+        </mat-form-field>
+        <div class="error-messages">
+          <div *ngFor="let error of error_messages.password">
+            <div class="error-message"
+              *ngIf="passwordform.get('password')?.hasError(error.type) && (passwordform.get('password')?.dirty || passwordform.get('password')?.touched)">
+              {{ error.message }}
+            </div>
+          </div>
+        </div>
+
+        <!-- New Password -->
+        <mat-form-field>
+          <input matInput type="password" placeholder="Confirm New Password" name="newPassword"
+            formControlName="newPassword" required>
+        </mat-form-field>
+        <div class="error-messages">
+          <div *ngFor="let error of error_messages.newPassword">
+            <div class="error-message"
+              *ngIf="passwordform.get('newPassword')?.hasError(error.type) && (passwordform.get('newPassword') || passwordform.get('newPassword')?.touched)">
+              {{ error.message }}
+            </div>
+          </div>
+          <span *ngIf="f['newPassword'].getError('Mustmatch')!=null" class="text-danger">Password Doesn't Matched</span>
+        </div>
+
+        <button mat-raised-button color="accent" class="button" (click)="confirmPass()"
+          [disabled]="!passwordform.valid">Save</button><br><br>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</body>

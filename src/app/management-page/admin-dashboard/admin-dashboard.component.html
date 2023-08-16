@@ -1,0 +1,179 @@
+<head>
+    <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="router">
+        <br>
+        <div class="app-main__outer">
+            <div class="app-main__inner">
+                <div class="app-page-title">
+                    <div class="page-title-wrapper">
+                        <div class="page-title-heading">
+                            <div class="page-title-icon">
+                                <img src="assets/EXPD.svg" style="height: 20px;">
+                            </div>
+                            <div>Admin Dashboard
+                                <div class="page-title-subheading">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card mb-3 widget-content bg-midnight-bloom">
+                            <div class="widget-content-wrapper text-white">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Employees</div>
+                                    <div class="widget-subheading"></div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-white"><span>{{total}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card mb-3 widget-content bg-grow-early">
+                            <div class="widget-content-wrapper text-white">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Active Employees</div>
+                                    <div class="widget-subheading"></div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-white"><span>{{activeEmployees}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card mb-3 widget-content" id="nonActive">
+                            <div class="widget-content-wrapper text-white">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Non-Active Employees</div>
+                                    <div class="widget-subheading"></div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-white"><span>{{nonActiveEmployees}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card mb-3 widget-content">
+                            <div class="widget-content-outer">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left">
+                                        <div class="widget-heading">Total Logins</div>
+                                        <div class="widget-subheading"></div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <div class="widget-numbers text-success">{{dashBoardUserData}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-card mb-3 card">
+                            <div class="card-header">Last Active Assets
+                                <div class="btn-actions-pane-right">
+                                    <!-- <div role="group" class="btn-group-sm btn-group">
+                                        <button class="active btn btn-focus">Last Week</button>
+                                        <button class="btn btn-focus">All Month</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center"> Employee ID </th>
+                                            <th class="text-center"> Name </th>
+                                            <th class="text-center">Email</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-center">Created Date</th>
+                                            <th class="text-center">Updated Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let data of dashBoardData">
+                                            <td class="text-center text-muted">{{data.employeeRollNumber}}</td>
+                                            <td class="text-center text-muted">{{data.employeeName}}</td>
+                                            <td class="text-center text-muted">{{data.employeeEmail}}</td>
+                                            <td class="text-center text-muted">{{data.status ? 'Active' : 'Non-Active'}}
+                                            </td>
+                                            <td class="text-center text-muted">{{data.createdDate | date:'dd-MM-yyyy'}}
+                                            </td>
+                                            <td class="text-center text-muted">{{data.updatedDate | date:'dd-MM-yyyy'}}
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" id="PopoverCustomT-1"
+                                                    (click)="showAssetDetailsInModel(data)"
+                                                    class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#staticBackdrop">Details</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Asset Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <li name="laptop_name">Laptop Name: {{assetDetailss.laptop_name}}</li>
+                    <li name="branchid" #branchid>Monitor Number : {{assetDetailss.monitorNumber}}</li>
+                    <li name="branchid" #branchid>Lan Id Number: {{assetDetailss.lanIdNumber}}</li>
+                    <li name="branchid" #branchid>Laptop Charger Number: {{assetDetailss.laptopChargerNumber}}</li>
+                    <li name="branchid" #branchid>Locker Code: {{assetDetailss.lockerCode}}</li>
+                    <li name="branchid" #branchid>Mouse Status: {{assetDetailss.mouseStatus ? 'Active' : 'Non-Active'}}
+                    </li>
+                    <li name="branchid" #branchid>EarPhone Status: {{assetDetailss.earPhoneStatus ? 'Active' :
+                        'Non-Active'}}</li>
+                    <li name="branchid" #branchid>LaptopBag: {{assetDetailss.laptopBag ? 'Active' : 'Non-Active'}}</li>
+                    <li name="createdDate" #createdDate>Created Date: {{employeeDetails.createdDate |
+                        date:'dd-MM-yyyy'}}</li>
+                    <li name="updatedDate" #updatedDate>Updated Date: {{employeeDetails.updatedDate |
+                        date:'dd-MM-yyyy'}}</li>
+                    <li name="updatedDate" #updatedDate>Place Id: {{asset_Location.placeId}}</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

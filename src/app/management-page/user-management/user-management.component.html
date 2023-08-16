@@ -1,0 +1,88 @@
+<h1 style="color: #eb0028; text-align: center; font-size: 20px;">User Details Management</h1>
+  <!-- asset -->
+  <div class="container">
+
+    
+    <div style="margin: 10px;">
+      
+      <div class="form-outline mb-4">
+        <input type="search" id="form1" class="form-control me-2" (keyup)="applyFilter($event)" placeholder="Search columns" #input />
+   
+      <div id="newbutton"><button style="margin-top: 10px;" mat-raised-button color="primary"  (click)="userDialog()"> Create User </button></div>
+      <div id="newbutton"><button id="newButton" (click)="exporter.exportTable('csv',{fileName:'UserDetails'})"  mat-raised-button style="background-color: green; color: white;"> Export CSV </button></div>
+      <!-- (click)="exporter.exportTable('csv',{fileName:'assetDetails'})" -->
+      <div class="mat-elevation-z8">
+        <table mat-table matTableExporter [dataSource]="dataSource"  #exporter="matTableExporter" matSort>
+          
+          <ng-container matColumnDef="S.No">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
+            <td mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </td>
+          </ng-container>
+
+          <!-- ID Column -->
+          <ng-container matColumnDef="firstname">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="lastname">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
+          </ng-container>
+
+          <!-- Progress Column -->
+          <ng-container matColumnDef="contactno">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact No </th>
+            <td mat-cell *matCellDef="let row"> {{row.contact}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="emailid">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+          </ng-container>
+
+          <!-- Color Column -->
+          <!-- <ng-container matColumnDef="password">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Password </th>
+            <td mat-cell *matCellDef="let row"  > ****** </td>
+          </ng-container> -->
+
+          <!-- Role Column -->
+          <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
+            <td mat-cell *matCellDef="let row"> {{row.role}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status" >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+            <td mat-cell *matCellDef="let row"> {{row.enabled ? 'Active' : 'Non-Active'}} </td>
+          </ng-container>
+
+
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+            <td mat-cell *matCellDef="let row">
+
+              <button mat-icon-button  (click)="editUser(row)"  color="primary">
+                <mat-icon> edit</mat-icon>
+              </button>
+              <button  (click)="deleteUser(row.id)"  mat-icon-button color="warn">
+                <mat-icon> delete</mat-icon>
+              </button>
+              
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+          </tr>
+         
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+
+    </div>
+  </div>

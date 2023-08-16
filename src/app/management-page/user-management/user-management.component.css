@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+
+#newbutton{
+  float: right;
+  background-color: white;
+}
+
+ #newButton{
+  margin-top: 10px;
+  text-align: end;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+mat-dialog-actions{
+  height: 30%;
+  width: 30%;
+  }
+  table {
+      width: 100%;
+    }
+    
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+    
+   
+     .container{
+      max-width: 1200px;
+      margin:0 auto;
+     }
